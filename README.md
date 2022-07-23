@@ -1,2 +1,2 @@
 # Kursmaterial
-Hier findet ihr die, in den Stunden entstandenen Kursmaterialien.
+Hier findet ihr die Material, aus der ersten Kursstunde
