@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Kurs {
 
     public static void main(String[] args) {
-        //Datentyp benennung = Deklaration
+        //Datentyp deklaration = Zuweisung
         //Klasse bennenung = new Klasse();
         String string = "Hello World!";
         System.out.println(string);
@@ -32,7 +32,7 @@ public class Kurs {
         // man kann mehrere Namen geben (benutzung, falls beide denselben Wert haben):
         //int integer, integerTwo = 1;
         int integerTwo = 2;
-        // man kann in der Deklarierung berechnen
+        // man kann in der Zuweisung berechnen
         int a = integer + integerTwo;
         // oder beim System.out.println:
         System.out.println(integer + integerTwo);
