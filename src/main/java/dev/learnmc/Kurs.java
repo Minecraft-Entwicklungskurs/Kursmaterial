@@ -5,37 +5,44 @@ import java.util.Scanner;
 public class Kurs {
 
     public static void main(String[] args) {
-        //Datentyp deklaration = Zuweisung
-        //Klasse bennenung = new Klasse();
-        String string = "Hello World!";
+
+//      Datentyp deklaration = Wert
+        String string = "Programm startet...";
         System.out.println(string);
-        //Alternative
-        //System.err.println(string); für Fehler
-        //System.out.println("Hello World"); für allgemeine Informationen
 
-        //Zum Scannen von InputStreams Scanner nutzen
-        //scanner.next() zum Erhalten vom ersten eingegebenen Wort
-        //scanner.nextLine() zum Erhalten vom gesamten input
+//      Scanner objekt um die Konsole auszulesen
         Scanner scanner = new Scanner(System.in);
-        //scanner. man greift auf die deklarierte Klasse zu; Vorteil von benennung: Man kann mehrere methoden nacheinander nutzen
-        //scanner.nextLine() / nextLine() ist eine in der Scanner Klasse erstellte Methode.
-        //scanner.nextLine();
-        System.out.println(scanner.nextLine() /*methoden kann man auch direkt ausgeben*/);
-        //alternative Lösung:
-        //String string = scanner.nextLine();
-        //System.out.println(string); // ausgabe des Wertes von string
 
-        //int ist ein primitiver Datentyp
-        //Datentypen sind beispielsweise Klassen
-        //primitive Klassen sind Klassen, die in vorherigen Sprachen schon benutzt wurden
-        int integer = 1; //integer weist man ohne "" Zeichen einen Wert zu
-        // man kann mehrere Namen geben (benutzung, falls beide denselben Wert haben):
-        //int integer, integerTwo = 1;
-        int integerTwo = 2;
-        // man kann in der Zuweisung berechnen
-        int a = integer + integerTwo;
-        // oder beim System.out.println:
-        System.out.println(integer + integerTwo);
+        //Datentypen können auch ohne Wert deklariert werden:
+        String operator;
+        //später kann man einen Wert zuweisen
+        //in unserem fall:
+        operator = scanner.next();
+        double one = scanner.nextDouble(); //Zeiger vom Scanner beweg sich zum nächsten input
+        double two = scanner.nextDouble(); // ||
+        double sol = 0; //sol bekommt 0 als wert zugewiesen
+
+        //else if klammern:
+        if(operator.equalsIgnoreCase("+")) {
+            sol = one + two; // Wert von sol kann auch geändert werden in dem falle one+two
+        }else if(operator.equalsIgnoreCase("-")) {
+            sol = one - two; // wert von sol = one-two
+        }else if(operator.equalsIgnoreCase("*")) {
+            sol = one * two; // wert von sol = one*two
+        }else if(operator.equalsIgnoreCase("/")) {
+            sol = one / two; //...
+            // sol kann man auch beim zuweisen eines Wertes wieder benutzen;
+            // sol = sol + 1; wert ist dementsprechend der aktuelle Wert von sol + 1
+            // zum abkürzen kann man schreiben sol++; diesen erhöht den Wert von sol ebenfalls + 1
+        }else {
+            // was passiert wenn nichts zutrifft?
+            System.out.println("Error...!");
+            //gegebenenfalls Programm mit
+            System.exit(0);
+            //beenden
+        }
+        // Ergebnis in die Konsole zurückgeben
+        System.out.println("Ergebnis: " + sol);
     }
 
 }
